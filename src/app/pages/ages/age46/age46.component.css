@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.age-box {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.label {
+  background-color: #285dab;
+  color: white;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}

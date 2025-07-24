@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { DescriptionComponent } from './description/description.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    ImageCarouselComponent,  // ✅ important
+    DescriptionComponent     // ✅ important
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'mon-site';
-}
+export class AppComponent {}
