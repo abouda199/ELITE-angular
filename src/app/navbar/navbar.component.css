@@ -10,6 +10,8 @@
   top: 0;
   z-index: 1000;
   font-family: 'Segoe UI', Roboto, sans-serif;
+
+  border-radius: 0 0 15px 15px;  /* coins arrondis en bas */
 }
 
 .nav-container {
@@ -32,7 +34,7 @@
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #f1c40f;
+  border: 2px solid #bddff3;
   flex-shrink: 0;
 }
 
@@ -45,7 +47,7 @@
 .logo-text {
   font-weight: 800;
   font-size: 1.5rem;
-  background: linear-gradient(90deg, #3498db, #f1c40f);
+  background: linear-gradient(90deg, #3498db, #31118a);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -123,7 +125,7 @@
 }
 
 .register-btn {
-  background-color: #f1c40f;
+  background-color: #abaeb1;
   color: #2c3e50;
   border: none;
   padding: 0.65rem 1.8rem;
