@@ -21,8 +21,11 @@
               "zone.js"
             ],
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
+<<<<<<< HEAD
                 "input": "src/assets",
                 "output": "/assets"
               },
@@ -30,9 +33,19 @@
                 "input": "src",
                 "glob": "favicon.ico",
                 "output": "/"
+=======
+                "input": "src/assets/carousel",
+                "output": "/assets/carousel/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/images",
+                "output": "/assets/images/"
+>>>>>>> origin/develop
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -74,7 +87,10 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mon-site:build"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -85,12 +101,21 @@
               "zone.js/testing"
             ],
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets/carousel",
+                "output": "/assets/carousel/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/images",
+                "output": "/assets/images/"
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -99,7 +124,11 @@
       }
     }
   },
+<<<<<<< HEAD
   "cli": {
     "analytics": false
   }
+=======
+  "defaultProject": "mon-site"
+>>>>>>> origin/develop
 }

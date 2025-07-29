@@ -6,9 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 
+<<<<<<< HEAD
 bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(HttpClientModule, BrowserAnimationsModule), // ✅ animations
     provideRouter(routes)
   ]
 });
+=======
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));
+>>>>>>> origin/develop

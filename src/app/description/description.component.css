@@ -1,0 +1,336 @@
+.description {
+  padding: 2rem 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-content h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.learn-more {
+  color: #3498db;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .image-content {
+    flex: 1;
+  }
+  .stats-section {
+  background-color: #f8fafc;
+  padding: 4rem 1rem;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-section h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.stats-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #3498db;
+}
+
+.stats-description {
+  text-align: center;
+  color: #4a5568;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.stat-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.stat-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.stat-item p {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Styles de base VISIBLES */
+.stats-section {
+  background-color: #f8fafc;
+  padding: 4rem 1rem;
+  opacity: 1 !important; /* Force la visibilité */
+  visibility: visible !important;
+  display: block !important;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+}
+/* Section Activités - Version avec images */
+.activities-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.activities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activities-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.activities-subtitle {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3498db, transparent);
+  width: 80%;
+  margin: 0 auto 3rem;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.activity-card {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.activity-icon {
+  height: 80px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-icon img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.activity-card h3 {
+  color: #2b6cb0;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.activity-card p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .divider {
+    width: 60%;
+  }
+}
+/* Section Activités - Version 3 colonnes */
+.activities-section {
+  background-color: #f8fafc; /* Fond plus doux */
+  padding: 5rem 1rem;
+}
+
+.activities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titres */
+.activities-section h2 {
+  color: #2c3e50;
+  font-size: 2.5rem; /* Taille augmentée */
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700; /* Plus gras */
+}
+
+.activities-subtitle {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.3rem;
+  margin-bottom: 3rem; /* Marge augmentée */
+}
+
+/* Grille fixe à 3 colonnes */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes fixes */
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* Carte d'activité */
+.activity-card {
+  background: #ffffff;
+  border-radius: 16px; /* Bordures plus arrondies */
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Cercle avec contour bleu */
+.circle-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f0f9ff; /* Fond bleu clair */
+  border: 4px solid #3498db; /* Contour bleu plus épais */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Icônes/Images */
+.circle-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Texte des cartes */
+.activity-card h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.activity-card p {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablettes */
+  }
+}
+
+@media (max-width: 600px) {
+  .activities-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
+}
+/* Le reste de vos styles... */
+}
