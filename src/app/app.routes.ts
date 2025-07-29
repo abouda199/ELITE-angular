@@ -8,6 +8,8 @@ import { Age1113Component } from './pages/ages/age1113/age1113.component';
 import { Age1315Component } from './pages/ages/age1315/age1315.component';
 import { Age1618Component } from './pages/ages/age1618/age1618.component';
 import { DescriptionComponent } from './description/description.component'; // page d'accueil
+import { ClubComponent } from './club/club.component';
+
 
 export const routes: Routes = [
   { path: '', component: DescriptionComponent }, // Page d'accueil
@@ -17,6 +19,8 @@ export const routes: Routes = [
   { path: 'ages/13-15', component: Age1315Component },
   { path: 'ages/16-18', component: Age1618Component },
   { path: 'contact', component: ContactComponent },
+  { path: 'club', component: ClubComponent },
+
 
   { path: '**', redirectTo: '' } // Redirection vers accueil si route inconnue
 ];
