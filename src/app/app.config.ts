@@ -1,6 +1,6 @@
 import { provideRouter } from '@angular/router';
-import { appRoutes } from './app.routes';
+import { routes } from './app.routes';
 
 export const appConfig = [
-  provideRouter(appRoutes)
+  provideRouter(routes)
 ];

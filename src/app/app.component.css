@@ -1,4 +1,6 @@
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
+main {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #142f57, #071d34);
 }

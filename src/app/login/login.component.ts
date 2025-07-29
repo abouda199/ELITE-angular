@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; // ✅ IMPORT MANQUANT
+import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { AuthService } from '../_services/auth.service';
 import { TokenStorageService } from '../_services/token-storage.service';
@@ -9,24 +10,26 @@ import { TokenStorageService } from '../_services/token-storage.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule], // ✅ AJOUTÉ
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   form: any = {
-    email: null,
-    password: null
+    email: '',
+    password: ''
   };
 
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
+  successMessage = ''; // ✅ Ajouté
   roles: string[] = [];
 
   constructor(
     private authService: AuthService,
-    private tokenStorage: TokenStorageService
+    private tokenStorage: TokenStorageService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -43,19 +46,29 @@ export class LoginComponent implements OnInit {
       next: data => {
         this.tokenStorage.saveToken(data.token);
         this.tokenStorage.saveUser(data);
+
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        this.roles = [data.role];
-        this.reloadPage();
+        this.roles = this.tokenStorage.getUser().roles;
+
+        this.successMessage = 'Connexion réussie ! ✅'; 
+
+        setTimeout(() => {
+          this.router.navigate(['/']); 
+        }, 2000);
       },
       error: err => {
-        this.errorMessage = err.error;
+        this.errorMessage = err.error?.message || 'Erreur lors de la connexion ❌';
+        this.successMessage = '';
         this.isLoginFailed = true;
       }
     });
   }
 
-  reloadPage(): void {
-    window.location.reload();
+  goToRegister(): void {
+    this.router.navigate(['/register']);
   }
+  goToForgotPassword(): void {
+  this.router.navigate(['/forgot-password']);
+}
 }

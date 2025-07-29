@@ -1,19 +1,20 @@
-// app.component.ts
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
+import { slideInAnimation } from './route-animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterModule],
+  animations: [slideInAnimation],
   template: `
-    <nav>
-      <a routerLink="/">Home</a> |
-      <a routerLink="/login">Login</a> |
-      <a routerLink="/register">Register</a>
-    </nav>
-    <hr />
-    <router-outlet></router-outlet>
+    <main [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </main>
   `
 })
-export class AppComponent {}
+export class AppComponent {
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.['animation'];
+  }
+}
