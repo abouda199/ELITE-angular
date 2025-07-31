@@ -334,3 +334,329 @@
 }
 /* Le reste de vos styles... */
 }
+.carousel-fullscreen {
+  position: relative;
+  width: 100%;
+  height: 500px; /* ou ta hauteur image */
+  overflow: visible;
+}
+
+/* Flèches */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+.arrow:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+.arrow.left {
+  left: 10px;
+}
+.arrow.right {
+  right: 10px;
+}
+
+/* Image background et contenu */
+.carousel-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Texte centré */
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  z-index: 5;
+}
+
+/* Bannière en bas, dépasse */
+.inscription-banner {
+  position: absolute;
+  bottom: -80px; /* un peu plus bas si besoin */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0b4c84;
+  color: white;
+  padding: 30px 60px; /* plus de padding */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 1000px; /* largeur plus grande */
+  width: 90%;
+  text-align: center;
+  z-index: 6;
+  font-size: 3.2rem; /* taille de police globale augmentée */
+}
+
+.inscription-banner h2 {
+  font-size: 2.5rem; /* titre plus grand */
+  margin-bottom: 10px;
+}
+
+.inscription-banner p {
+  font-size: 1.3rem; /* texte plus grand */
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #fbc800;
+  color: #000;
+  border: none;
+  padding: 14px 40px; /* bouton plus grand */
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.stay-connected {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.stay-connected h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ff7c00; /* orange */
+}
+
+.stay-connected .highlight {
+  color: #ff7c00;
+  font-weight: bold;
+}
+.video-section-container {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Ajuste la hauteur ici */
+  overflow: hidden;
+}
+
+.video-section-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Important pour garder le ratio et couvrir */
+  z-index: 1;
+  background-color: transparent;
+}
+
+.video-section-info-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background-color: rgba(11, 60, 113, 0.65); /* bleu transparent */
+  color: white;
+  padding: 2rem;
+  z-index: 2; /* au-dessus de la vidéo */
+  overflow-y: auto;
+}
+
+
+
+
+.actualites-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.actualites-header h2 {
+  color: #0b7ca8;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.actualites-header h3 {
+  font-size: 1.5rem;
+  color: #012a4a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.actualites-header p {
+  color: #8c8c8c;
+  margin-bottom: 40px;
+}
+
+.actualites-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.actualite-card {
+  background: white;
+  width: 300px;
+  text-align: left;
+}
+
+.actualite-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.actualite-card h4 {
+  color: #012a4a;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.actualite-card p {
+  font-size: 0.95rem;
+  color: #6c6c6c;
+}
+
+.actualites-btn {
+  margin-top: 30px;
+}
+
+.actualites-btn button {
+  background-color: #004b87;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.actualites-btn button:hover {
+  background-color: #003763;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .actualites-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.temoignages-section {
+  background-color: #054a85;
+  color: white;
+  padding: 100px 100px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.temoignages-section h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.temoignage-content p {
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.temoignage-navigation button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: color 0.3s ease;
+}
+
+.temoignage-navigation button:hover,
+.temoignage-navigation button:focus {
+  color: #ffca00;
+  outline: none;
+}
+
+.temoignage-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.temoignage-footer .photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-right: 15px;
+}
+
+.temoignage-footer .infos {
+  text-align: left;
+}
+
+.temoignage-footer .infos strong {
+  font-weight: bold;
+  display: block;
+}
+
+.temoignage-footer .infos p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.dots {
+  margin-top: 25px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: #ffca00;
+}
+
+.dot:focus {
+  outline: 2px solid #ffca00;
+  outline-offset: 2px;
+}
+

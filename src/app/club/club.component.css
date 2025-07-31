@@ -327,3 +327,115 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
 }
+.trainers-section {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  z-index: 0;
+  color: white; /* texte blanc pour contraster avec fond sombre */
+  font-family: Arial, sans-serif;
+}
+
+.trainers-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/assets/images/formateur.jpg') no-repeat center center/cover;
+  filter: brightness(0.5);
+  z-index: -2;
+}
+
+.trainers-section::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.trainers-section h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  animation: colorChange 8s infinite alternate;
+}
+
+/* Animation de couleur du titre */
+@keyframes colorChange {
+  0% { color: #1a73e8; }
+  25% { color: #e81a8f; }
+  50% { color: #1ae89a; }
+  75% { color: #e8c41a; }
+  100% { color: #1a73e8; }
+}
+
+.trainers-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.trainer-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #1a73e8;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(26, 115, 232, 0.5);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  border-color: #e81a8f;
+  box-shadow: 0 0 20px #e81a8f;
+}
+
+.trainer-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #1a73e8;
+  transition: border-color 0.4s ease;
+}
+
+.trainer-card:hover img {
+  border-color: #e81a8f;
+}
+
+.trainer-card h5 {
+  font-weight: 700;
+  color: #1a73e8;
+  margin-bottom: 10px;
+  transition: color 0.4s ease;
+}
+
+.trainer-card:hover h5 {
+  color: #e81a8f;
+}
+
+.trainer-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .trainers-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .trainers-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { DescriptionComponent } from './description/description.component';
+import { FooterComponent } from './footer/footer.component';  // <-- ajoute ceci
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ import { DescriptionComponent } from './description/description.component';
   imports: [
     RouterOutlet,
     NavbarComponent,
-    ImageCarouselComponent,  // ✅ important
-    DescriptionComponent     // ✅ important
+    ImageCarouselComponent,
+    DescriptionComponent,
+    FooterComponent   // <-- ajoute Footer ici
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
