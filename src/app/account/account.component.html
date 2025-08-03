@@ -1,0 +1,18 @@
+<div class="account-container">
+  <h2>Mon compte</h2>
+  <div class="parent-info">
+    <h3>Informations personnelles</h3>
+    <p>Nom: {{ parent.lastName }}</p>
+    <p>Prénom: {{ parent.firstName }}</p>
+    <p>Email: {{ parent.email }}</p>
+    <p>Téléphone: {{ parent.phoneNumber }}</p>
+  </div>
+  <div class="children-info">
+    <h3>Mes enfants</h3>
+    <ul>
+      <li *ngFor="let child of children">
+        {{ child.firstName }} {{ child.lastName }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="parent-dashboard">
+  <h2>Tableau de bord du parent</h2>
+  
+  <div class="parent-info">
+    <h3>Mes informations</h3>
+    <p>Nom: {{ lastName }}</p>
+    <p>Prénom: {{ firstName }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Téléphone: {{ phoneNumber }}</p>
+    <button (click)="openRegistration()">Inscription / Mise à jour</button>
+  </div>
+
+  <div class="children-list">
+    <h3>Mes enfants</h3>
+    <ul>
+      <li *ngFor="let child of children">
+        {{ child.firstName }} {{ child.lastName }} - 
+        <a [routerLink]="['/child', child.id]">Voir détails</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="parent-actions">
+    <button [routerLink]="['/account']">Consulter mon compte</button>
+    <button [routerLink]="['/history']">Consulter historique & certificats</button>
+    <button [routerLink]="['/fees']">Suivre les frais d'adhésion</button>
+    <button [routerLink]="['/events']">Réserver un événement</button>
+  </div>
+</div>

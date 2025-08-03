@@ -1,0 +1,9 @@
+<div class="events-container">
+  <h2>Événements et Compétitions</h2>
+  <ul>
+    <li *ngFor="let event of events">
+      {{ event.title }} - {{ event.date }} (Places restantes : {{ event.spots }})
+      <button (click)="reserveEvent(event.id)">Réserver une place</button>
+    </li>
+  </ul>
+</div>

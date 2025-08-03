@@ -1,0 +1,37 @@
+<div class="child-profile">
+  <h2>Profil de l'enfant: {{ child.firstName }} {{ child.lastName }}</h2>
+  
+  <div class="child-info">
+    <h3>Informations</h3>
+    <p>Âge: {{ child.age }} ans</p>
+    <p>Niveau: {{ child.educationLevel }}</p>
+    <img [src]="child.photoUrl" alt="Photo de {{ child.firstName }}" *ngIf="child.photoUrl">
+  </div>
+
+  <div class="certificates">
+    <h3>Certificats</h3>
+    <ul>
+      <li *ngFor="let cert of child.certificates">
+        {{ cert.title }} - {{ cert.date }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="history">
+    <h3>Historique des activités</h3>
+    <ul>
+      <li *ngFor="let hist of child.history">
+        {{ hist.date }} - {{ hist.description }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="attendance-calendar">
+    <h3>Calendrier (Présence/Absence)</h3>
+    <ul>
+      <li *ngFor="let entry of child.attendance">
+        {{ entry.date }} - {{ entry.status }}
+      </li>
+    </ul>
+  </div>
+</div>
